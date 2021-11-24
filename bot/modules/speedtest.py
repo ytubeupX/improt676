@@ -6,7 +6,6 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ParseMo
 from telegram.ext import CallbackContext, Filters, run_async, CommandHandler
 
 
-@run_async
 def speedtest(update, context):
     message = update.effective_message
     ed_msg = message.reply_text("Running Speed Test . . . ")
@@ -50,3 +49,4 @@ SPEED_HANDLER = CommandHandler(BotCommands.SpeedCommand, speedtest,
                                                   filters=CustomFilters.authorized_chat | CustomFilters.authorized_user)
 
 dispatcher.add_handler(SPEED_HANDLER)
+dispatcher.run_async
