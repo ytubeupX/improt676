@@ -238,6 +238,12 @@ except KeyError:
     INDEX_URL = None
     INDEX_URLS.append(None)
 try:
+    IMAGE_URL = getConfig('IMAGE_URL')
+    if len(IMAGE_URL) == 0:
+        IMAGE_URL = 'https://telegra.ph/file/48a897c47a1f3c40738ec.jpg'
+except KeyError:
+    IMAGE_URL = 'https://telegra.ph/file/48a897c47a1f3c40738ec.jpg'
+try:
     TORRENT_DIRECT_LIMIT = getConfig('TORRENT_DIRECT_LIMIT')
     if len(TORRENT_DIRECT_LIMIT) == 0:
         TORRENT_DIRECT_LIMIT = None
