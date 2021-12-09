@@ -48,10 +48,11 @@ def start(update, context):
     buttons.buildbutton("Repo", "https://github.com/SlamDevs/slam-mirrorbot")
     buttons.buildbutton("Channel", "https://t.me/SlamMirrorUpdates")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
-    if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''Hi There :)
+
+        start_string = f''' Hi there Good Morning !
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
+        if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         update.effective_message.reply_photo(IMAGE_URL, start_string, parse_mode=ParseMode.HTML)
     else:
         sendMarkup(
