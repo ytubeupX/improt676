@@ -52,7 +52,7 @@ def start(update, context):
     start_string = f'''Hi there Good Morning !
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
-     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
+    if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
      update.effective_message.reply_photo(IMAGE_URL, start_string, parse_mode=ParseMode.HTML)
     else:
         sendMarkup(
