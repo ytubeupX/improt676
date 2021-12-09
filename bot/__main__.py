@@ -49,11 +49,10 @@ def start(update, context):
     buttons.buildbutton("Channel", "https://t.me/SlamMirrorUpdates")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''
-This bot can mirror all your links to Google Drive!
+        start_string = f'''Hi There 😁
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
-        sendMarkup(IMAGE_URL, start_string, context.bot, update)
+        update.effective_message.reply_photo(IMAGE_URL, start_string, parse_mode=ParseMode.HTML)
     else:
         sendMarkup(
             'Oops! not a Authorized user.\nPlease deploy your own <b>slam-mirrorbot</b>.',
