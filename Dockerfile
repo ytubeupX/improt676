@@ -1,4 +1,4 @@
-FROM tiktikimelbo7/mega-sdk-python:latest
+FROM mirrorultroid6/mega-sdk-python:latest
 
 
 WORKDIR /usr/src/app
