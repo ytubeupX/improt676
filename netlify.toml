@@ -1,3 +1,14 @@
 [template.environment]
-  SECRET_TOKEN = "change me for your secret token"
-  CUSTOM_LOGO = "set the url to your custom logo here"
+
+      DOWNLOAD_DIR = "Set it to /usr/src/app/downloads/"
+      DOWNLOAD_STATUS_UPDATE_INTERVAL = "Set It to 5 or more"
+      OWNER_ID = "Your Telegram ID"
+      GDRIVE_FOLDER_ID = "Google Drive Folder ID"
+      BOT_TOKEN = "Telegram Bot Token"
+      AUTO_DELETE_MESSAGE_DURATION = "Set it to -1 or more"
+      IS_TEAM_DRIVE = "True/False"
+      INDEX_URL = "GDINDEX"
+      TELEGRAM_API = "Telegram API"
+      TELEGRAM_HASH = "Telegram Hash"
+      VIEW_LINK = "Set it True"
+      BASE_URL_OF_BOT = "Web Link, Required for Heroku to avoid sleep or use worker if you don't want to use web (selection)"
