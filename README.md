@@ -271,7 +271,7 @@ sudo docker image prune -a
 ## Deploying on Heroku
 
 - Deploy with a Heroku button =
-<p>[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/tiktikimelbo7/slam-mirrorbot)</p>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/tiktikimelbo7/slam-mirrorbot)
 
 
 - Deploying on Heroku with Github Workflow
