@@ -269,6 +269,10 @@ sudo docker image prune -a
 <p><a href="https://youtu.be/c8_TU1sPK08"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>
 
 ## Deploying on Heroku
+
+- Deploy with a Heroku button = [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/tiktikimelbo7/slam-mirrorbot)
+
+
 - Deploying on Heroku with Github Workflow
 <p><a href="https://github.com/breakdowns/slam-mirrorbot/wiki/Deploying-slam-mirrorbot-on-Heroku-with-Github-Workflows"> <img src="https://img.shields.io/badge/Deploy%20Guide-blueviolet?style=for-the-badge&logo=heroku" width="170""/></a></p>
 
@@ -284,8 +288,7 @@ For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in con
     <summary><b>Click Here For More Details</b></summary>
 
 Let us create only the Service Accounts that we need. 
-**Warning**: abuse of this feature is not the aim of this project and we do **NOT** recommend that you make a lot of projects, just one project and 100 SAs allow you plenty of use, its also possible that over abuse might get your projects banned by Google. 
-
+**Warning**: abuse of this feature is not the aim of this project and we do **NOT** recommend that you make a lot of projects, just one project and 100 SAs allow you plenty of use, its also possible that over abuse might get your projects banned
 **NOTE:** 1 Service Account can copy around 750 GB a day, 1 project can make 100 Service Accounts so that's 75 TB a day, for most users this should easily suffice.
 ```
 python3 gen_sa_accounts.py --quick-setup 1 --new-only
