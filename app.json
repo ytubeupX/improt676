@@ -59,12 +59,12 @@
         "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org.",
         "required": true
       },
-      "View_Link": {
+      "VIEW_LINK": {
        "description": "Set it True to get view links",
         "required": true
       },
       "BASE_URL_OF_BOT":{
-      "description": "Web Link, Required for Heroku to avoid sleep or use worker if you don't want to use web (selection)"
+      "description": "Web Link, Required for Heroku to avoid sleep or use worker if you don't want to use web (selection)",
       "required": true
       }
     }
