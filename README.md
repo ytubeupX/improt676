@@ -280,6 +280,10 @@ sudo docker image prune -a
 - Deploying on Heroku with heroku-cli and Goorm IDE
 <p><a href="https://telegra.ph/How-to-Deploy-a-Mirror-Bot-to-Heroku-with-CLI-05-06"> <img src="https://img.shields.io/badge/Deploy%20Guide-grey?style=for-the-badge&logo=telegraph" width="170""/></a></p>
 
+## Deploying on Netlify
+
+[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tiktikimelbo7/slam-mirrorbot)
+
 # Using Service Accounts for uploading to avoid user rate limit
 For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in config file or environment variables.
 **NOTE**: Using Service Accounts is only recommended while uploading to a Team Drive.
