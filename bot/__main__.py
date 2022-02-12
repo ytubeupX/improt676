@@ -192,7 +192,6 @@ def bot_help(update, context):
     reply_markup = InlineKeyboardMarkup(button.build_menu(1))
     sendMarkup(help_string, context.bot, update, reply_markup)
 
-'''
 botcmds = [
         (f'{BotCommands.HelpCommand}','Get Detailed Help'),
         (f'{BotCommands.MirrorCommand}', 'Start Mirroring'),
@@ -219,7 +218,6 @@ botcmds = [
         (f'{BotCommands.LogCommand}','Get the Bot Log [owner/sudo only]'),
         (f'{BotCommands.TsHelpCommand}','Get help for Torrent search module')
     ]
-'''
 
 def main():
     fs_utils.start_cleanup()
