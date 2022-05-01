@@ -55,6 +55,9 @@ class setInterval:
     def cancel(self):
         self.stopEvent.set()
 
+
+
+
 def get_readable_file_size(size_in_bytes) -> str:
     if size_in_bytes is None:
         return '0B'
@@ -66,6 +69,9 @@ def get_readable_file_size(size_in_bytes) -> str:
         return f'{round(size_in_bytes, 2)}{SIZE_UNITS[index]}'
     except IndexError:
         return 'File too large'
+
+
+
 
 def getDownloadByGid(gid):
     with download_dict_lock:
@@ -82,6 +88,9 @@ def getDownloadByGid(gid):
             ):
                 return dl
     return None
+
+
+
 
 def getAllDownload():
     with download_dict_lock:
@@ -101,6 +110,8 @@ def getAllDownload():
                 return dlDetails
     return None
 
+
+
 def get_progress_bar_string(status):
     completed = status.processed_bytes() / 8
     total = status.size_raw() / 8
@@ -114,6 +125,9 @@ def get_progress_bar_string(status):
     p_str += ' ' * (PROGRESS_MAX_SIZE - cFull)
     p_str = f"[{p_str}]"
     return p_str
+
+
+
 
 def get_readable_message():
     with download_dict_lock:
@@ -142,15 +156,15 @@ def get_readable_message():
                     msg += f"\n<b>Uploaded : </b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
                 else:
                     msg += f"\n<b>Downloaded : </b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
-                msg += f"\n<b>Speed : </b> <code>{download.speed()}</code> <b> ETA : </b> <code>{download.eta()}</code>"
+                msg += f"\n<b>Speed : </b> <code>{download.speed()}</code>\n<b>ETA : </b> <code>{download.eta()}</code>"
                 try:
                     msg += f"\n<b>Seeders : </b> <code>{download.aria_download().num_seeders}</code>" \
-                           f" | <b>Peers : </b> <code>{download.aria_download().connections}</code>"
+                           f"\n<b>Peers : </b> <code>{download.aria_download().connections}</code>"
                 except:
                     pass
                 try:
                     msg += f"\n<b>Seeders : </b> <code>{download.torrent_info().num_seeds}</code>" \
-                           f" | <b>Leechers : </b> <code>{download.torrent_info().num_leechs}</code>"
+                           f"\n<b>Leechers : </b> <code>{download.torrent_info().num_leechs}</code>"
                 except:
                     pass
                 msg += f"\n<b>To Cancel : </b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
