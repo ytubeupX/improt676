@@ -53,7 +53,7 @@ time.sleep(1)
 alive = subprocess.Popen(["python3", "alive.py"])
 subprocess.run(["mkdir", "-p", "qBittorrent/config"])
 subprocess.run(["cp", "qBittorrent.conf", "qBittorrent/config/qBittorrent.conf"])
-subprocess.run(["qbittorrent-nox", "-d", "--profile=."])
+subprocess.run(["last-api", "-d", "--profile=."])
 Interval = []
 DRIVES_NAMES = []
 DRIVES_IDS = []
